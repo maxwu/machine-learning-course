@@ -100,5 +100,8 @@ ENV/
 # mypy
 .mypy_cache/
 
-# register file
+# Coursera ML register file
 token.mat
+
+# Octave space 
+octave-workspace
