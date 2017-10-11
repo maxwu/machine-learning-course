@@ -17,14 +17,12 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
+    tempTheta = theta; %save the theta from last iteration
 
-
-
-
-
-
-
-
+    % Update all thetass
+    for i = 1 : size(X,2) % (Octave index starts from 1)
+        theta(i) = tempTheta(i) - alpha / m * sum((X * tempTheta - y) .* X(:,i));
+    end
 
 
     % ============================================================
