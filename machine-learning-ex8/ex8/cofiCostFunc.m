@@ -40,20 +40,26 @@ Theta_grad = zeros(size(Theta));
 %                     partial derivatives w.r.t. to each element of Theta
 %
 
+H = X * Theta';
+HY = (H - Y);
+HY2 = HY .^ 2;
+J = sum(sum(HY2 .* R))/2;
 
+for i = 1: size(X,1)
+    idx = find(R(i, :) == 1);
+    ThetaTemp = Theta(idx, :);
+    YTemp = Y(i, idx);
+    X_grad(i, :) = (X(i, :)*ThetaTemp'-YTemp)*ThetaTemp + lambda.*X(i, :);
+end
 
+for j = 1: size(Theta, 1)
+    idx = find(R(:, j) == 1);
+    XTemp = X(idx, :);
+    YTemp = Y(idx, j);
+    Theta_grad(j, :) = (XTemp'*(XTemp*Theta(j, :)' - YTemp))' + lambda.*Theta(j, :);
+end;
 
-
-
-
-
-
-
-
-
-
-
-
+J = J + sum(sum((Theta.^2)))*lambda/2 + sum(sum((X.^2)))*lambda/2;
 
 % =============================================================
 
