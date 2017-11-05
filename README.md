@@ -1,10 +1,12 @@
 # machine-learning-course
 
-### Notes on Stanford Machine Learning Open Source - Andrew Ng.
+### Notes on Stanford Machine Learning Open Course
 
-- Programming Assignments
+- Problem Solutions
 
-[Programming Ex1](https://github.com/maxwu/machine-learning-course/tree/master/machine-learning-ex1)
+[Week2 Ex1: Linear Regression](https://github.com/maxwu/machine-learning-course/tree/master/machine-learning-ex1/ex1)
+
+[Week3 Ex2: Logistic Regression](https://github.com/maxwu/machine-learning-course/tree/master/machine-learning-ex2/ex2)
 
 ### Practice Environment
 
