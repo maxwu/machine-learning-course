@@ -14,8 +14,9 @@ J = 0;
 %               You should set J to the cost.
 
 H = X*theta - y;
-J = (1/(2*m)) * sum(H.*H)
-
+% J = (1/(2 * m)) * sum(H .* H)
+% .^2: square value on every element in mat.
+J = sum(H.^2)/(2 * m)
 
 % =========================================================================
 
